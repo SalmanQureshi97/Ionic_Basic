@@ -12,11 +12,3 @@ An alternative is to emulate the app on a device or upload it to the ionic cloud
 ## Bugs and Issues
 
 Have a bug or an issue with this template? [Open a new issue](https://github.com/kristofferandreasen/simple-ionic-3-app/issues) here on Github.
-
-## Creator
-
-The template was created by and is maintained by **[Kristoffer Andreasen](https://medium.com/@kristoffer_andreasen)**
-
-## Copyright and License
-
-Copyright 2017 Kristoffer Andreasen. Code released under the [MIT](https://github.com/kristofferandreasen/simple-ionic-3-app/blob/master/LICENSE) license.
