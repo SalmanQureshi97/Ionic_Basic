@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'http://localhost:',
+  baseUrlEmulator: 'http://10.0.2.2:',
+  basePort: '8081/',
+
+  listUsers_Url: 'listUsers',
+  addUsers_Url: 'addUsers',
+  updateUser_Url: 'updateUser',
+  deleteUser_Url: 'deleteUser',
 };
 
 /*

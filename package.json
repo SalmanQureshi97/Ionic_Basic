@@ -25,16 +25,24 @@
     "@angular/pwa": "^0.803.23",
     "@angular/router": "^8.2.14",
     "@angular/service-worker": "^8.2.14",
+    "@capacitor/camera": "^1.1.0",
+    "@capacitor/core": "^3.2.4",
+    "@capacitor/filesystem": "^1.0.3",
+    "@capacitor/storage": "^1.2.0",
     "@ionic-native/camera": "^5.36.0",
     "@ionic-native/core": "5.0.0-beta.15",
     "@ionic-native/file": "^5.36.0",
     "@ionic-native/file-path": "^5.36.0",
+    "@ionic-native/globalization": "^4.20.0",
+    "@ionic-native/http": "5.36.0",
     "@ionic-native/in-app-browser": "5.0.0-beta.15",
     "@ionic-native/ionic-webview": "^5.36.0",
     "@ionic-native/splash-screen": "^5.0.0-beta.15",
     "@ionic-native/status-bar": "5.0.0-beta.15",
     "@ionic/angular": "^5.8.3",
     "@ionic/storage": "^2.3.1",
+    "@ngx-translate/core": "^13.0.0",
+    "@ngx-translate/http-loader": "^6.0.0",
     "check-password-strength": "^2.0.3",
     "cordova-android": "^8.1.0",
     "cordova-ios": "^5.1.1",
@@ -67,6 +75,7 @@
     "@types/jasminewd2": "2.0.8",
     "@types/node": "^12.12.26",
     "codelyzer": "^5.2.1",
+    "cordova-plugin-globalization": "^1.11.0",
     "cordova-sqlite-storage": "^6.0.0",
     "jasmine-core": "^3.5.0",
     "jasmine-spec-reporter": "4.2.1",
@@ -79,7 +88,7 @@
     "puppeteer": "^1.20.0",
     "ts-node": "8.5.0",
     "tslint": "^5.20.1",
-    "typescript": "~3.5.3"
+    "typescript": "3.4.5"
   },
   "description": "An Ionic project",
   "cordova": {
@@ -97,7 +106,8 @@
       },
       "cordova-plugin-statusbar": {},
       "cordova-plugin-ionic-keyboard": {},
-      "cordova-sqlite-storage": {}
+      "cordova-sqlite-storage": {},
+      "cordova-plugin-globalization": {}
     }
   }
 }

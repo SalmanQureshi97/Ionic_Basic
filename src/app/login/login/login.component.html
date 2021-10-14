@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title>{{ title }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,7 +12,7 @@
   <form #loginForm="ngForm" novalidate>
     <ion-list>
       <ion-item>
-        <ion-label position="stacked" color="primary">Username</ion-label>
+        <ion-label position="stacked" color="primary">{{ Username }}</ion-label>
         <ion-input
           [(ngModel)]="login.username"
           name="username"
@@ -35,7 +35,7 @@
       </ion-text>
 
       <ion-item>
-        <ion-label position="stacked" color="primary">Password</ion-label>
+        <ion-label position="stacked" color="primary">{{ Password }}</ion-label>
         <ion-input
           [(ngModel)]="login.password"
           name="password"
@@ -58,18 +58,27 @@
 
     <ion-row>
       <ion-col>
-        <ion-button (click)="onLogin(loginForm)" type="submit" expand="block"
-          >Login</ion-button
-        >
+        <ion-button (click)="onLogin(loginForm)" type="submit" expand="block">{{
+          Login
+        }}</ion-button>
       </ion-col>
       <ion-col>
-        <ion-button (click)="onSignup()" color="light" expand="block"
-          >Signup</ion-button
-        >
+        <ion-button (click)="onSignup()" color="light" expand="block">{{
+          Signup
+        }}</ion-button>
       </ion-col>
       <p [hidden]="notMatching" class="ion-padding-start">
         Username & Password are not matching
       </p>
     </ion-row>
   </form>
+
+  <br />
+  <ion-item>
+    <ion-label>{{ lang }}</ion-label>
+    <ion-select (ionChange)="changeLanguage($event)" value="en">
+      <ion-select-option value="en">English</ion-select-option>
+      <ion-select-option value="es">Spanish</ion-select-option>
+    </ion-select>
+  </ion-item>
 </ion-content>

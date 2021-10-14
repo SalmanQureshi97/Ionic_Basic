@@ -1,0 +1,8 @@
+{
+    "Page": "Login",
+    "Username": "Username",
+    "Password": "Password",
+    "Login" : "LOGIN",
+    "Signup" : "SIGNUP",
+    "language":"Language"
+}

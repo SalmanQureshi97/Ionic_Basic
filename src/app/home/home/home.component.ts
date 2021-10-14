@@ -13,7 +13,9 @@ export class HomeComponent implements OnInit {
 
   constructor(private userData: DataService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.userData.API_getUsers();
+  }
 
   ionViewDidEnter() {
     this.userData.getAllUsers().then((data) => {

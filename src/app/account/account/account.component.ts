@@ -6,7 +6,9 @@ import {
   LoadingController,
   ToastController,
 } from '@ionic/angular';
+import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { DataService } from 'src/app/shared/services/data.service';
+import { NativeHelperService } from 'src/app/shared/services/native-helper.service';
 
 @Component({
   selector: 'app-account',
@@ -15,11 +17,13 @@ import { DataService } from 'src/app/shared/services/data.service';
 })
 export class AccountComponent {
   username: string;
+  imageSrc;
   images = [];
   constructor(
     public alertCtrl: AlertController,
     public router: Router,
-    public userData: DataService
+    public userData: DataService,
+    public nativeHelper: NativeHelperService
   ) {}
 
   ngAfterViewInit() {
@@ -28,6 +32,11 @@ export class AccountComponent {
 
   updatePicture() {
     console.log('Clicked to update picture');
+    //this.nativeHelper.addNewToGallery();
+    this.nativeHelper.openGallery().then((imageUri) => {
+      this.imageSrc = imageUri;
+    });
+    //this.nativeHelper.openCamera();
   }
 
   // Present an alert with the current username populated
@@ -129,9 +138,5 @@ export class AccountComponent {
   logout() {
     this.userData.logout();
     this.router.navigateByUrl('/login');
-  }
-
-  support() {
-    this.router.navigateByUrl('/support');
   }
 }
