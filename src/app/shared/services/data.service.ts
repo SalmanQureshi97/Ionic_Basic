@@ -212,9 +212,9 @@ export class DataService {
         //   .catch((error) => {
         //     console.log('ERROR', error);
         //   });
-        this.getDetails(url).subscribe((data) => {
-          console.log(data);
-        });
+        // this.getDetails(url).subscribe((data) => {
+        //   console.log(data);
+        // });
       }
     });
 

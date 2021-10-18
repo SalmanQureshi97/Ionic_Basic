@@ -24,10 +24,12 @@ import { environment } from 'src/environments/environment';
 import { DataService } from './shared/services/data.service';
 //import { Camera } from '@ionic-native/Camera';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+
+import { AngularFireModule } from '@angular/fire';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { HttpConfigInterceptor } from './shared/interceptors/httpConfig.interceptor';
-
+import { FirebaseAuthentication } from '@ionic-native/firebase-authentication/ngx';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -39,9 +41,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-
     HttpClientModule,
     FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig), // auth
     IonicModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
@@ -64,6 +66,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SplashScreen,
     StatusBar,
     WebView,
+    FirebaseAuthentication,
     HTTP,
     DataService,
     Camera,

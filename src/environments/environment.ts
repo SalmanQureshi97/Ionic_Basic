@@ -12,6 +12,15 @@ export const environment = {
   addUsers_Url: 'addUsers',
   updateUser_Url: 'updateUser',
   deleteUser_Url: 'deleteUser',
+
+  firebaseConfig: {
+    apiKey: 'AIzaSyCSN8YZxnrl2GwbGJQoCri3sR1mbVnNIdk',
+    authDomain: 'ionic-8d1c1.firebaseapp.com',
+    projectId: 'ionic-8d1c1',
+    storageBucket: 'ionic-8d1c1.appspot.com',
+    messagingSenderId: '873999448654',
+    appId: '1:873999448654:web:41969f5572d7cf2539611f',
+  },
 };
 
 /*
